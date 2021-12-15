@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhap so nam <input type="number" id="sonam"></label>
+<button onclick="tinh_toan()">Ket qua</button>
+<p id="display"></p>
+<script>
+    function tinh_toan() {
+        let year = +document.getElementById('sonam').value;
+        let the_ky = Math.floor(year / 100) + 1;
+        document.getElementById('display').innerHTML = "Nam : " + year + " thuoc the ky: "+ the_ky;
+    }
+</script>
+
+</body>
+</html>

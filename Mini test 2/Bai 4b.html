@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhap a <input type="number" id="a"></label>
+<label>Nhap b <input type="number" id="b"></label>
+<button onclick="tinh_toan()">Ket qua</button>
+<p id="display"></p>
+<script>
+    function tinh_toan(){
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let a_mu_2 = a ** 2;
+        let a_mu_b = a**b;
+        document.getElementById('display').innerHTML = "Ket qua a^2 la: " + a_mu_2 + "<br>" +  "Ket qua a^b la: " + a_mu_b;
+
+
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhap a <input type="number" id="a"></label>
+<button onclick="tinh_toan()">Ket qua</button>
+<p id="display"></p>
+<script>
+    function tinh_toan(){
+        let a = +document.getElementById('a').value;
+        let chu_vi = a * 4;
+        let dien_tich = a ** 2 ;
+        document.getElementById('display').innerHTML = "Chu vi cua hinh vuong co canh bang " + a + " la : " + chu_vi + "<br>" + "Dien tich cua hinh vuong co canh bang " + a + " la : " + dien_tich;
+
+
+    }
+
+</script>
+</body>
+</html>
