@@ -9,13 +9,23 @@
 <label>Nhap b <input type="number" id="b"></label>
 <label>Nhap c <input type="number" id="c"></label>
 <button onclick="kiem_tra()">Kiem tra</button>
-<h3 id="display"></h3>
+<p id="display"></p>
 <script>
     function kiem_tra() {
         let canh_a = +document.getElementById('a').value;
         let canh_b = +document.getElementById('b').value;
         let canh_c = +document.getElementById('c').value;
-        if (canh_a**2 == canh_b**2 + canh_c**2 )
+        if (canh_a**2 == canh_b**2 + canh_c**2  || canh_b**2 == canh_c**2 + canh_a**2 || canh_c**2 == canh_a**2 + canh_b**2){
+            document.getElementById('display').innerHTML = "Day la tam giac vuong"
+        }else if (canh_a == canh_b && canh_b == canh_c && canh_c == canh_a){
+            document.getElementById('display').innerHTML = "Day la tam giac deu"
+        }else if(canh_a == canh_b || canh_b == canh_c || canh_c == canh_a){
+            document.getElementById('display').innerHTML = "Day la tam giac can"
+        }else if(canh_a + canh_b > canh_c && canh_b + canh_c > canh_a && canh_c + canh_a > canh_b){
+            document.getElementById('display').innerHTML = "Day la tam giac"
+        }else {
+            document.getElementById('display').innerHTML = "Day khong phai la tam giac"
+        }
     }
 </script>
 
